@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+        <meta charset="UTF-8">
+        <title>Palette Generator</title>
+    </head>
+
+    <body>
+        <div class="title">
+            <header id="title-text">Palette Generator</header>
+        </div>
+        
+
+        <div>
+            <h2>For Extracting An Image's Color Palette</h2>
+        </div>
+
+        <form action="/" method="POST" enctype="multipart/form-data">
+
+        <button type="button" id="button" class="file-select" onclick="document.getElementById('inputFile').click();">
+            <h3>Click The Example Image Below To Upload Your Own File</h3>
+            <div class="image-display" id="imagePreview">
+                <img src= "{{ srcFile }}" class="image-display-image">
+                <span class="image-display-text">Reference Image</span>
+            </div>
+        </button>
+
+            <div id="fileInput">
+                <input type="file" name="inputFile" class="input-file" id="inputFile">
+                <label for="inputFile"><label>
+            </div>
+
+            <button type="submit" id="submit-button" class="input-button">Generate Palette</button>
+      </form>
+
+        <h3 id="click-text">Click On A Color To Copy It!</h3>
+    
+        <div id="palette">
+            <span id="c1" class="color-dot">{{colors[0][0]}}, {{colors[0][1]}}, {{colors[0][2]}}</span>
+            <span id="c2" class="color-dot">{{colors[1][0]}}, {{colors[1][1]}}, {{colors[1][2]}}</span>
+            <span id="c3" class="color-dot">{{colors[2][0]}}, {{colors[2][1]}}, {{colors[2][2]}}</span>
+            <span id="c4" class="color-dot">{{colors[3][0]}}, {{colors[3][1]}}, {{colors[3][2]}}</span>
+            <br>
+            <span id="c5" class="color-dot">{{colors[4][0]}}, {{colors[4][1]}}, {{colors[4][2]}}</span>
+            <span id="c6" class="color-dot">{{colors[5][0]}}, {{colors[5][1]}}, {{colors[5][2]}}</span>
+            <span id="c7" class="color-dot">{{colors[6][0]}}, {{colors[6][1]}}, {{colors[6][2]}}</span>
+            <span id="c8" class="color-dot">{{colors[7][0]}}, {{colors[7][1]}}, {{colors[7][2]}}</span>
+        </div>
+
+        {% if colors %}
+            <style>
+                #c1{
+                    background-color: rgb({{colors[0][0]}}, {{colors[0][1]}}, {{colors[0][2]}});
+                }
+
+                #c2{
+                    background-color: rgb({{colors[1][0]}}, {{colors[1][1]}}, {{colors[1][2]}});
+                }
+                #c3{
+                    background-color: rgb({{colors[2][0]}}, {{colors[2][1]}}, {{colors[2][2]}});
+                }
+                #c4{
+                    background-color: rgb({{colors[3][0]}}, {{colors[3][1]}}, {{colors[3][2]}});
+                }
+                #c5{
+                    background-color: rgb({{colors[4][0]}}, {{colors[4][1]}}, {{colors[4][2]}});
+                }
+                #c6{
+                    background-color: rgb({{colors[5][0]}}, {{colors[5][1]}}, {{colors[5][2]}});
+                }
+                #c7{
+                    background-color: rgb({{colors[6][0]}}, {{colors[6][1]}}, {{colors[6][2]}});
+                }
+                #c8{
+                    background-color: rgb({{colors[7][0]}}, {{colors[7][1]}}, {{colors[7][2]}});
+                }
+
+                .image-display-image{
+                    src: "{{ srcFile }}";
+                    display: block;
+                }
+
+                .image-display-text{
+                    display: none;
+                }
+
+            </style>
+        {% endif %}
+        <script src="/static/app.js"></script>
+    </body>
+    
+</html>

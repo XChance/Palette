@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
+    background-color:#f0f0f0;
+
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 20px;
+}
+
+.image-display{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+    height: 512px;
+    max-width: 1024px;
+    max-height: 576px;
+    min-width: 512px;
+    min-height: 288px;
+    margin-top: 50px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.image-display-image{
+    /* display: none; */
+    border: solid 8px black;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1024px;
+    max-height: 576px;
+    min-width: 512px;
+    min-height: 288px;
+}
+
+.image-display-image:hover{
+    color:red;
+}
+
+.image-display-text{
+    font-size: 2rem;
+}
+
+.input-button{
+    background-color: #bdc3c7;
+    border: solid 4px black;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 2rem;
+    
+
+    transition-duration: 0.3s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .input-button:hover{
+      background-color: #7f8c8d;
+  }
+
+  .input-file{
+      display: none;
+      margin-top: 60px;
+  }
+
+#fileUpload{
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#palette{
+    margin-top: 60px;
+}
+
+.color-dot{
+    height: 140px;
+    width: 140px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color:grey;
+    border: 6px solid black;
+    border-radius: 50%;
+    display: inline-block;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.color-dot:hover{
+    border: 6px solid #f0f0f0;
+}
+
+button.file-select{
+    border: none;
+    outline: none;
+}
+
+button.file-select:hover{
+    border: none;
+    outline: none;
+}
+
+#click-text{
+    margin-top: 2rem;
+}
